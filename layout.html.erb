@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <% # TITLE %>
+    
+    <%= yield :title %>
+    
+    <% # META TAGS %>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= csrf_meta_tags %>
+    
+    <% # STYLES %>
+    
+    <%= stylesheet_link_tag "admin/admin", :media => "all" %>
+    <%= yield :styles %>
+    
+    <% # HEAD SCRIPTS %>
+    
+    <%= javascript_include_tag "admin/admin" %>
+    <%= yield :head_scripts %>
+    
+  </head>
+  <body>
+
+    <% # HEADER %>
+
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><%= glyph :wrench %> KBR - Sistema financeiro</a>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Site", "/path1"  %></li>
+            <li><%= link_to "Logout", "/path2"  %></li>
+            <li><%= link_to "Link3", "/path3"  %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <% # PRINCIPAL CONTAINER AND ROW %>
+
+    <div class="container">
+      <div class="row">
+        
+        <% # MENU %>
+        
+        <div class="col-lg-3 col-md-3" data-turbolinks="false">
+          <div class="well sidebar-nav">
+            <img class="thumbnail" src="/logo1.png">
+            <h3><span class="glyphicons glyphicons-glass"></span>Menu</h3>
+            <ul class="nav nav-list">
+              <li class="nav-header"><%= glyph :user %> Clientes</li>
+              <li><a href="/" class="active"> Adicionar</a></li>
+              <li><a href="/"> Gerenciar</a></li>
+            </ul>
+            <br>
+            <ul class="nav nav-list">
+              <li class="nav-header"><%= glyph :barcode %> Boletos</li>
+              <li><a href="/"> Adicionar</a></li>
+              <li><a href="/"> Gerenciar</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <% # CONTENT %>
+        
+        <div class="col-lg-9 col-md-9">
+          <%= yield :breadcrumb %>
+          <hr>
+          <%= bootstrap_flash %>
+          <%= yield %>
+        </div>
+    
+      </div>
+    </div>
+    
+    <% # BODY SCRIPTS %>
+    
+    <%= yield :body_scripts  %>
+    
+  </body>
+</html>

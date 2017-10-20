@@ -1,0 +1,86 @@
+<% content_for :title do %>
+<title>Clientes # Gerenciar</title>
+<% end %>
+
+<% content_for :styles do %>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<% end %>
+
+<%= content_for :breadcrumb do %>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Clientes</li>
+  <li class="breadcrumb-item active">Gerenciar</li>
+</ol>
+<% end %>
+
+<table id="datatable" class="table table-condensed" data-turbolinks="false">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+        <td><a href="" class="btn btn-default">Ver <%= glyph :picture %></a></td>
+        <td><a href="" class="btn btn-default">Editar <%= glyph :pencil %></a></td>
+        <td><a href="" class="btn btn-default">Excluir <%= glyph :trash %></a></td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+        <td><a href="" class="btn btn-default">Ver <%= glyph :picture %></a></td>
+        <td><a href="" class="btn btn-default">Editar <%= glyph :pencil %></a></td>
+        <td><a href="" class="btn btn-default">Excluir <%= glyph :trash %></a></td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+        <td><a href="" class="btn btn-default">Ver <%= glyph :picture %></a></td>
+        <td><a href="" class="btn btn-default">Editar <%= glyph :pencil %></a></td>
+        <td><a href="" class="btn btn-default">Excluir <%= glyph :trash %></a></td>
+      </tr>
+    </tbody>
+  </table>
+
+<% content_for :body_scripts do %>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script>
+      // Datatable
+      $(document).ready(function(){
+        $('#datatable').DataTable({
+          language: {
+            processing:     "Processando...",
+            search:         "Pesquisar:",
+            lengthMenu:    "Mostrar: _MENU_ Resultados por página",
+            info:           "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+            infoEmpty:      "Mostrando 0 até 0 de 0 registros",
+            infoFiltered:   "(Filtrados de _MAX_ registros)",
+            infoPostFix:    "",
+            loadingRecords: "Carregando...",
+            zeroRecords:    "Nenhum navio encontrada!",
+            emptyTable:     "Aucune donnée disponible dans le tableau",
+            paginate: {
+                first:      "Próximo",
+                previous:   "Anterior",
+                next:       "Primeiro",
+                last:       "último"
+            },
+            aria: {
+                sortAscending: ": Ordenar colunas de forma ascendente",
+                sortDescending: ": Ordenar colunas de forma descendente"
+            }
+          }
+        });
+      });
+</script>
+<% end %>
