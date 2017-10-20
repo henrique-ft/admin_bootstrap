@@ -22,6 +22,6 @@ Put in your config/initializers/assets.rb:
 
 Rails.application.config.assets.precompile += %w( admin/admin.js admin/admin.css )
 
-To block create assets on generators put in yout config/application.rb:
+To block create assets on generators put in your config/application.rb:
 
 config.generators.assets = false
