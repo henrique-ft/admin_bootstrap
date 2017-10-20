@@ -1,6 +1,7 @@
 Gems Used:
 
 twitter-bootstrap-rails http://www.rubydoc.info/gems/twitter-bootstrap-rails/4.0.0
+bootstrap_form https://rubygems.org/gems/bootstrap_form
 jquery-rails http://www.rubydoc.info/gems/jquery-rails/4.3.1
 
 Put in your gemfile: 
