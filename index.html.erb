@@ -2,10 +2,6 @@
 <title>Clientes # Gerenciar</title>
 <% end %>
 
-<% content_for :styles do %>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-<% end %>
-
 <%= content_for :breadcrumb do %>
 <ol class="breadcrumb">
   <li class="breadcrumb-item">Clientes</li>
@@ -53,7 +49,6 @@
   </table>
 
 <% content_for :body_scripts do %>
-<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script>
       // Datatable
       $(document).ready(function(){
