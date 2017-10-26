@@ -10,10 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
-//= require turbolinks
 //= require jquery
 //= require jquery_ujs
+//= require turbolinks
 //= require twitter/bootstrap
 //= require admin/foundation-datepicker
 //= require admin/foundation-datepicker-pt
