@@ -17,4 +17,4 @@
 //= require admin/foundation-datepicker
 //= require admin/foundation-datepicker-pt
 //= require admin/datatables
-//= require admin/base
+//= require_self
