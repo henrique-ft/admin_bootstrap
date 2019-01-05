@@ -93,7 +93,7 @@ fieldset .btn {
 }
 
 .navbar-default {
-    background-image: url(/assets/admin/menu-bg.png);
+    background-image: url(/assets/admin/menu-bg-black.png);
     background-color: #313131 !important;
     border-bottom: 0.3em solid #e6e6e6 !important;
 }
