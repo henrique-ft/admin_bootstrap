@@ -23,6 +23,10 @@ a {
     color: #2e5e88 !important;
 }
 
+.container {
+    width: 90%;
+}
+
 .alert {
     border-radius: 0px !important;
 }
@@ -128,7 +132,11 @@ fieldset .btn {
     color: #323232 !important;
 }
 
-.nav.nav-list>li>a.active {
+ul.navbar-nav li.active a {
+    background-color: #0000006e !important;
+}
+
+.sidebar-nav .nav.nav-list>li.active>a {
     text-decoration: none;
     background-color: #f5f5f5 !important;
     border-right: 0.3em solid #333333;
@@ -206,4 +214,16 @@ table#datatable {
 
 .additional-infos-div .info-left{
     float: left;
+}
+
+.invalid-feedback {
+    color: #bf4e4e;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+@media only screen and (max-width: 768px) {
+    .thumbnail {
+      display:none;
+    }
 }
